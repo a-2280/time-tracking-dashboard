@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --purple: hsl(246, 80%, 60%);
+  --light-purple: hsl(235, 45%, 61%);
+  --dark-purple: hsl(264, 64%, 52%);
+
+  --navy: hsl(235, 46%, 20%);
+  --light-navy: hsl(236, 100%, 87%);
+  --dark-navy: hsl(226, 43%, 10%);
+
+  --orange: hsl(15, 100%, 70%);
+  --blue: hsl(195, 74%, 62%);
+  --pink: hsl(348, 100%, 68%);
+  --green: hsl(145, 58%, 55%);
+  --yellow: hsl(43, 84%, 65%);
+}
+
+body {
+  background-color: var(--dark-navy);
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.main-card {
+  background-color: var(--navy);
+  border-radius: 1rem;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex: 1;
+  background-color: var(--purple);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.header h1 {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.header p {
+  margin-bottom: 5px;
+}
+
+.main-image {
+  max-width: 5rem;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin-bottom: 2.5rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 2rem;
+}
+
+li {
+  margin-bottom: 1rem;
+  color: var(--light-purple);
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-image-container {
+  display: flex;
+  justify-content: end;
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  max-height: 4rem;
+}
+
+.card-image {
+  height: 100%;
+  margin: -0.5rem 1rem -0.5rem 0;
+}
+
+.card-body-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.card-body-header-p {
+  font-weight: 500;
+  color: white !important;
+}
+
+.card-body {
+  padding: 2rem;
+  background-color: var(--navy);
+  border-radius: 1rem;
+  margin-top: -1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card-body h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+.card-body p {
+  color: var(--light-purple);
+}
+
+.card {
+  border-radius: 1rem;
+  min-height: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(1rem, 16rem));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.active {
+  color: white;
+}
+
+.work {
+  background-color: var(--orange);
+}
+
+.play {
+  background-color: var(--blue);
+}
+
+.study {
+  background-color: var(--pink);
+}
+
+.exercise {
+  background-color: var(--green);
+}
+
+.social {
+  background-color: var(--dark-purple);
+}
+
+.self-care {
+  background-color: var(--yellow);
+}
+
+.exercise img {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+}
+
+.social img {
+  margin-top: -1rem;
+  margin-bottom: 0;
+}
+
+.self-care img {
+  margin-bottom: 0.5rem;
+}
+
+.self-care-body,
+.exercise-body {
+  margin-top: -1rem;
+}
+
+li:hover {
+  color: white;
+}
+
+.card-body:hover {
+  filter: brightness(150%);
+}
+
+.card-body-header img {
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .header h1,
+  .card-body h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    height: fit-content;
+    width: 100vw;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 2rem;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .main-image {
+    margin: 0;
+  }
+
+  .header-name {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+  }
+
+  li {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .card-body-header {
+    margin: 0.5rem 0;
+  }
+
+  .mobile-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 476px) {
+  .header h1,
+  .card-body h1 {
+    font-size: 1.25rem;
+  }
+}
